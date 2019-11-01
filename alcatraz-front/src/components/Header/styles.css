@@ -1,0 +1,49 @@
+.header {
+  overflow: hidden;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+
+header#main-header {
+  height: 70px;
+  background-color: #282828;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header#sub-header {
+  height: 35px;
+  background-color: #de3232;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header#sub-header ul {
+  display: inline-flex;
+  list-style-type: none;
+}
+
+#sub-header ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 100;
+  padding: 0 20px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+#sub-header ul li a:last-child {
+border: none;
+}
+header#main-header img {
+  max-width: 150px;
+}
