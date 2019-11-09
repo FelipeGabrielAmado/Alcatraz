@@ -34,7 +34,8 @@ export default class Main extends Component {
                         {movies.map(movie => (
                             <article key={movie.id}>
                                 <div className="poster-box">
-                                    <img src={movie.poster} alt="Minha Figura"/>	
+                                    <img src={movie.poster} alt="Minha Figura"/>
+                                    <div className="movie-title">{movie.name}</div>
                                 </div>
                             </article>
                         ))}

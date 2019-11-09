@@ -39,5 +39,8 @@ article .poster-box img {
 article:hover{
     transform: scale(1.05);
     z-index: 9999;
-    filter: brightness(30%);
+}
+
+.movie-title{
+    color: white;
 }
