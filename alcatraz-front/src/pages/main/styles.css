@@ -1,0 +1,42 @@
+.movie-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article{
+    transition: .2s;
+}
+
+article .poster-box {
+  width: 274px;
+  height: 360px;
+}
+
+article .poster-box img {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+}
+
+.category-name {
+  color: #fff;
+  font-size: 1.5em;
+  padding: 30px 10px 15px 100px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-name p {
+  border-bottom: 5px solid #ffbe00;
+  width: 180px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+article:hover{
+    transform: scale(1.05);
+    z-index: 9999;
+}

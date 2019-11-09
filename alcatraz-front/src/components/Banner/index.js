@@ -7,7 +7,7 @@ import { Carousel } from 'react-responsive-carousel'
 const Banner = () => (
     <Carousel showThumbs={ false } autoPlay={ true } >
         <div className="banner">
-            <img src="images/banner-joker.png" />
+            <img src="images/banner-joker.jpg" />
         </div>
     </Carousel>
 );

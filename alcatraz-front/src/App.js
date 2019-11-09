@@ -2,13 +2,15 @@ import React from 'react';
 import './styles.css';
 
 import Header from './components/Header'
-import Banner from './components/Banner'
+import Routes from './routes'
+
 
 function App() {
   return (
     <div className="App">
-      <Header> </Header>
-      <Banner> </Banner>
+      <Header/>
+      <Routes/>
+
     </div>
   );
 }
