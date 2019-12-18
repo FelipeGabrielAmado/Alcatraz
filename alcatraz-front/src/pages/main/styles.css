@@ -14,7 +14,6 @@
 .poster-box:hover {
   transform: scale(1.05);
   z-index: 9999;
-  border: 1px solid white;
 }
 
 article .poster-box img {

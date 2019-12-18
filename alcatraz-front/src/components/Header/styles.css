@@ -8,7 +8,7 @@
 }
 
 header#main-header {
-  height: 70px;
+  height: 100px;
   background-color: #0B0A0D;
   font-size: 0.8em;
   font-weight: bold;
@@ -44,7 +44,7 @@ header#sub-header ul {
 }
 
 header#main-header img {
-  max-width: 150px;
+  max-width: 350px;
 }
 
 #sub-header ul li a:hover {

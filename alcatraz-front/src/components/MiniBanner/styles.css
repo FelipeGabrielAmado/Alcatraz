@@ -2,6 +2,14 @@
     display: inline-flex;
 }
 
+.mini-banner a{
+    transition: .5s;
+}
+.mini-banner a:hover {
+    transform: scale(1.1);
+    z-index: 9999;
+}
+
 .mini-banner img {
     border-radius: 25px;
     padding: 10px;
