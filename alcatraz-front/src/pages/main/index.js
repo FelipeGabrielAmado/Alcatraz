@@ -3,10 +3,10 @@ import api from '../../services/api';
 
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import OwlCarousel from 'react-owl-carousel2';
 
 import './styles.css'
 import Banner from '../../components/Banner'
+import MiniBanner from '../../components/MiniBanner'
 
 
 export default class Main extends Component {
@@ -28,29 +28,12 @@ export default class Main extends Component {
     render() {
         const { movies } = this.state;
 
-        const options = {
-            margin:10,
-            nav:true,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:3
-                },
-                1000:{
-                    items:5
-                }
-            }
-        };
-
         if (!movies) return null;
 
         return (
             <div>
                 <Banner />
-                <div className="category-name"><p>New Movies</p></div>
-                <OwlCarousel ref="car" options={options}>
+                <MiniBanner />
                     <div className="movie-list">
                         {movies.map(movie => (
 
@@ -67,7 +50,6 @@ export default class Main extends Component {
 
                         ))}
                     </div>
-                </OwlCarousel>
             </div >
         )
     }

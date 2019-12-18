@@ -1,19 +1,20 @@
 .movie-list {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
 }
 
 .poster-box {
   transition: 0.3s;
   position: relative;
-  width: 274px;
-  height: 360px;
+  width: 224.6px;
+  height: 320px;
   cursor: pointer;
 }
 
 .poster-box:hover {
   transform: scale(1.05);
   z-index: 9999;
+  border: 1px solid white;
 }
 
 article .poster-box img {
@@ -69,6 +70,7 @@ article .poster-box img {
   border-bottom: 1px solid #ffbe00;
   margin-bottom: 20px;
   border-width: thick;
+  line-height: 25px;
 }
 
 .movie-genre {
@@ -85,3 +87,14 @@ svg:not(:root).svg-inline--fa {
   color: #ffbe00;
 }
 
+.owl-nav.disabled {
+    display: none;
+}
+
+.carousel.carousel-slider{
+    margin-bottom: 50px!important;
+}
+
+article {
+    flex: 0 0 10%;
+}

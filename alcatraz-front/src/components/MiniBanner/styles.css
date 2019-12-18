@@ -1,0 +1,20 @@
+.mini-banner{
+    display: inline-flex;
+}
+
+.mini-banner img {
+    border-radius: 25px;
+    padding: 10px;
+}
+
+.mini-banner-config .carousel .control-dots{
+    display: none;
+}
+
+.carousel .slide{
+    background: transparent;
+}
+
+.carousel .carousel-status{
+    display: none;
+}
