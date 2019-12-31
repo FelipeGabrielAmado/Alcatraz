@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './styles.css'
 import Banner from '../../components/Banner'
 import MiniBanner from '../../components/MiniBanner'
-
+import Footer from '../../components/Footer'
 
 export default class Main extends Component {
     state = {
@@ -50,6 +50,7 @@ export default class Main extends Component {
 
                         ))}
                     </div>
+                <Footer />
             </div >
         )
     }
