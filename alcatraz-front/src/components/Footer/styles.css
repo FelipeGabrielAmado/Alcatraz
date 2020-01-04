@@ -6,6 +6,7 @@
     color: white;
     background-color: #0b0a0d;
     border-top: 5px solid #ffbe00;
+    clear: both;
 }
 
 .footer-box svg:not(:root).svg-inline--fa {
