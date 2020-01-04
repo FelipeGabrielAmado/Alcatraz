@@ -3,8 +3,10 @@ import api from '../../services/api';
 
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from 'react-router-dom'
 
 import './styles.css'
+import './responsive.css'
 import Banner from '../../components/Banner'
 import MiniBanner from '../../components/MiniBanner'
 import Footer from '../../components/Footer'
@@ -12,7 +14,6 @@ import Footer from '../../components/Footer'
 export default class Main extends Component {
     state = {
         movies: []
-
 
     };
 
@@ -39,12 +40,14 @@ export default class Main extends Component {
 
                             <article key={movie.id}>
                                 <div className="poster-box">
+                                    <Link to={`/movie/${movie.id}`}>
                                     <img src={movie.poster} alt="Minha Figura" />
                                     <div className="movie-info">
                                         <div className="movie-title"> {movie.name} </div>
                                         <div className="movie-genre"> {movie.genre} </div>
                                         <div className="movie-rating"> <FontAwesomeIcon icon={faStar} /> {movie.rating} </div>
                                     </div>
+                                    </Link>
                                 </div>
                             </article>
 

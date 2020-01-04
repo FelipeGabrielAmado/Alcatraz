@@ -3,6 +3,7 @@ import './styles.css';
 
 import Header from './components/Header'
 import Routes from './routes'
+import Footer from './components/Footer'
 
 
 function App() {
@@ -10,7 +11,7 @@ function App() {
     <div className="App">
       <Header/>
       <Routes/>
-
+      <Footer />
     </div>
   );
 }
