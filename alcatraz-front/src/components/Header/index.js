@@ -6,7 +6,7 @@ const Header = () => (
     <div className="header">
         <a href="http://localhost:3001/">
             <header id="main-header">
-                <img src="images/logo.png" alt="Logo Alcatraz"/>
+                <img src="/images/logo.png" alt="Logo Alcatraz"/>
             </header>
         </a>
         <header id="sub-header">
