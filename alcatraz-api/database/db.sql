@@ -12,3 +12,10 @@ CREATE TABLE movies (
     stars VARCHAR(255),
     poster VARCHAR(255)
 );
+
+create table categories(
+	id SERIAL PRIMARY KEY,
+    name VARCHAR(255),
+    description VARCHAR(255),
+    menu boolean
+);

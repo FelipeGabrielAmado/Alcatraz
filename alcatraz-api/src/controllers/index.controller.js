@@ -13,6 +13,11 @@ const getMovies = async (req, res) => {
     res.status(200).json(response.rows);
 };
 
+const getMoviesMain = async (req, res) => {
+    const response = await pool.query('SELECT * FROM movies ORDER BY id DESC limit 24');
+    res.status(200).json(response.rows);
+};
+
 const getMoviesById = async (req, res) => {
     const id = parseInt(req.params.id);
     const response = await pool.query('SELECT * FROM movies WHERE id = $1', [id]);
@@ -70,5 +75,6 @@ module.exports = {
     getMoviesById,
     createMovie,
     updateMovie,
-    deleteMovie
+    deleteMovie,
+    getMoviesMain
 };
