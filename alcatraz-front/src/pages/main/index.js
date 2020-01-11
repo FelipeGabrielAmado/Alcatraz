@@ -18,7 +18,7 @@ export default class Main extends Component {
 
 
     async componentDidMount() {
-        const response = await api.get(`/movies`);
+        const response = await api.get(`/moviesmain`);
         console.log(response)
         this.setState({ movies: response.data });
     }

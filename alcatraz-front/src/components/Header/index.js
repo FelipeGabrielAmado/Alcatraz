@@ -1,28 +1,45 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './styles.css'
 
+import api from '../../services/api'
 
-const Header = () => (
-    <div className="header">
-        <a href="http://localhost:3001/">
-            <header id="main-header">
-                <img src="/images/logo.png" alt="Logo Alcatraz"/>
-            </header>
-        </a>
-        <header id="sub-header">
-        <ul>
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Adventure</a></li>
-            <li><a href="#">Comedy</a></li>
-            <li><a href="#">Crime</a></li>
-            <li><a href="#">Drama</a></li>
-            <li><a href="#">Horror</a></li>
-            <li><a href="#">Romance</a></li>
-            <li><a href="#">Sci-fi</a></li>
-            <li><a href="#">Thriller</a></li>
-        </ul>
-        </header>
-    </div>
-);
 
-export default Header;
+export default class Header extends Component {
+
+    state = {
+        categories: []
+
+    };
+
+    async componentDidMount() {
+        const response = await api.get(`/categories`);
+        console.log(response)
+        this.setState({ categories: response.data });
+    }
+
+    render() {
+        const { categories } = this.state;
+        const itemsMenu = categories.filter(category => category.menu === true);
+        
+        return (
+            <div className="header">
+                <a href="http://localhost:3001/">
+                    <header id="main-header">
+                        <img src="/images/logo.png" alt="Logo Alcatraz" />
+                    </header>
+                </a>
+                <header id="sub-header">
+                    <ul>
+
+                        {itemsMenu.map(category => (
+
+                            <li key={category.id}><a href="#">{category.name}</a></li>
+
+                        ))}
+                            <li> <a href='#'> See more </a></li>
+                    </ul>
+                </header>
+            </div>
+        );
+    }
+}
