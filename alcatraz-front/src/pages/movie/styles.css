@@ -1,10 +1,11 @@
 .movie-inner {
-    margin-top: 200px;
-    margin-bottom: 100px;
+    margin-top: 135px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
+    position: relative;
+    height: 800px;
 }
 
 .poster-inner {
@@ -18,7 +19,8 @@
 }
 
 .movie-info-inner{
-    float: right;
+    position: absolute;
+    clear: both;
 }
 
 .movie-genre{
@@ -78,4 +80,25 @@
     border: 1px solid transparent;
     background: #ffbe00;
     color: #1D1C24;
+}
+
+.movie-background {
+    opacity: .2;
+    pointer-events: none;
+    z-index: -9999;
+}
+
+.movie-trailer-player {
+    float: right;
+}
+
+.info-inner{
+    float: left;
+    margin-right: 40px;
+}
+
+.movie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

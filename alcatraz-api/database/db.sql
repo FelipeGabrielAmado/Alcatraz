@@ -10,7 +10,10 @@ CREATE TABLE movies (
     trailer VARCHAR(255),
     director VARCHAR(255),
     stars VARCHAR(255),
-    poster VARCHAR(255)
+    poster VARCHAR(255),
+    background VARCHAR(255),
+    streaming VARCHAR(255),
+    category VARCHAR(255)
 );
 
 create table categories(
