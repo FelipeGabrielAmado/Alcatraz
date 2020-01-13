@@ -1,3 +1,4 @@
+--Movies seeding
 INSERT INTO public.movies
 (id, "name", description, genre, rating, trailer, director, stars, poster)
 VALUES(1, 'Joker', 'In Gotham City, mentally-troubled comedian Arthur Fleck is disregarded and mistreated by society. He then embarks on a downward spiral of revolution and bloody crime. This path brings him face-to-face with his alter-ego: "The Joker".', 'Crime, Drama, Thriller', '8.9/10', 'https://www.youtube.com/watch?v=zAGVQLHvwOY', 'Todd Phillips', 'Joaquin Phoenix, Robert De Niro', 'https://cenapop.uol.com.br/wordpress/wp-content/uploads/2019/04/joker-filme.jpg');
@@ -91,3 +92,77 @@ INSERT INTO public.movies
 (id, "name", description, genre, rating, trailer, director, stars, poster)
 VALUES(25, 'Life is Beautiful', 'When an open-minded Jewish librarian and his son become victims of the Holocaust, he uses a perfect mixture of will, humor, and imagination to protect his son from the dangers around their camp.
 ', 'Comedy, Drama, Romance ', '8,6/10', 'https://www.youtube.com/watch?v=pAYEQP8gx3w', 'Roberto Benigni', 'Roberto Benigni, Nicoletta Braschi, Giorgio Cantarini', 'https://m.media-amazon.com/images/M/MV5BYmJmM2Q4NmMtYThmNC00ZjRlLWEyZmItZTIwOTBlZDQ3NTQ1XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_UX182_CR0,0,182,268_AL_.jpg');
+
+--Categories seeding
+
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(1, 'Action', 'Action film is a film genre in which the protagonist or protagonists are thrust into a series of events that typically include violence, extended fighting, physical feats, and frantic chases.', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(2, 'Adventure ', 'Adventure fiction is fiction that usually presents danger, or gives the reader a sense of excitement.
+
+', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(4, 'Horror ', 'Horror is a genre of speculative fiction which is intended to frighten, scare, disgust, or startle its readers by inducing feelings of horror and terror.', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(3, 'Romance', 'Two basic elements comprise every romance novel: a central love story and an emotionally satisfying and optimistic ending. ', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(5, 'Animation', 'Animation is a method in which pictures are manipulated to appear as moving images. In traditional animation, images are drawn or painted by hand on transparent celluloid sheets to be photographed and exhibited on film.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(6, 'Biography', 'A film that tells the story of the life of a real person, often a monarch, political leader, or artist. ', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(7, 'Comedy', 'A comedy film is a genre of film in which the main emphasis is on humor. These films are designed to make the audience laugh through amusement and most often work by exaggerating characteristics for humorous effect.', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(8, 'Crime', 'Crime films, in the broadest sense, are a cinematic genre inspired by and analogous to the crime fiction literary genre. Films of this genre generally involve various aspects of crime and its detection.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(9, 'Documentary', 'A documentary film is a nonfictional motion picture intended to document reality, primarily for the purposes of instruction, education, or maintaining a historical record.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(10, 'Drama', 'In film and television, drama is a genre of narrative fiction (or semi-fiction) intended to be more serious than humorous in tone.', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(11, 'Family', 'Family film is a genre that is contains appropriate content for younger viewers. Family film aims to appeal not only to children, but to a wide range of ages. ', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(12, 'Fantasy', 'Fantasy films are films that belong to the fantasy genre with fantastic themes, usually magic, supernatural events, mythology, folklore, or exotic fantasy worlds.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(13, 'Film Noir', 'Film noir is a cinematic term used primarily to describe stylish Hollywood crime dramas, particularly those that emphasize cynical attitudes and sexual motivations. The 1940s and 1950s are generally regarded as the "classic period" of American film noir.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(14, 'History', 'A historical film is a fiction film showing past events or set within a historical period. This extensive genre shares territory with the biopic, costume drama, heritage film, and epic film.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(15, 'Horror', 'A horror film is a film that seeks to elicit fear for entertainment purposes.', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(16, 'Musical', 'Musical film is a film genre in which songs by the characters are interwoven into the narrative, sometimes accompanied by dancing.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(18, 'Mystery', 'A mystery film is a genre of film that revolves around the solution of a problem or a crime.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(19, 'Sci-Fi', 'Science fiction film (or sci-fi film) is a genre that uses speculative, fictional science-based depictions of phenomena that are not fully accepted by mainstream science.', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(21, 'Sport', 'A sports film is a film genre that uses sport as the theme of the film.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(22, 'Superhero', 'A superhero film, superhero movie or superhero motion picture is a film that is focused on the actions of one or more superheroes: individuals who usually possess superhuman abilities relative to a normal person and are dedicated to protecting the public.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(23, 'Thriller', 'Thriller is a genre of fiction, having numerous, often overlapping subgenres. Thrillers are characterized and defined by the moods they elicit, giving viewers heightened feelings of suspense, excitement, surprise, anticipation and anxiety.', true);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(24, 'War', 'War film is a film genre concerned with warfare, typically about naval, air, or land battles, with combat scenes central to the drama. It has been strongly associated with the 20th century.', false);
+INSERT INTO public.categories
+(id, "name", description, menu)
+VALUES(25, 'Western', 'Western is a genre of fiction which tells stories set primarily in the latter half of the 19th century in the American Old West, often centering on the life of a nomadic cowboy or gunfighter armed with a revolver and a rifle who rides a horse.', false);
