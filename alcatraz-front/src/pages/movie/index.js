@@ -33,6 +33,11 @@ export default class Movie extends Component {
             height: '390',
             width: '640'
         };
+        const netflix = movies.filter(movie => movie.netflix !== null);
+        const prime = movies.filter(movie => movie.prime !== null);
+        const disney = movies.filter(movie => movie.disney !== null);
+        const hbo = movies.filter(movie => movie.hbo !== null);
+        const youtube = movies.filter(movie => movie.youtube !== null);
 
         return (
             <div>
@@ -51,10 +56,30 @@ export default class Movie extends Component {
                                 <div className='movie-trailer-player'> <YouTube videoId={movie.trailer} opts={opts} onReady={this._onReady} /> </div>
                             </div>
 
+                            <div className='movie-link'>
+                                {netflix.map(movie => (
+                                    <a href={movie.netflix} target="_blank"> <img src="/images/netflix.png" alt="Netflix" /> </a>
+                                ))}
 
+                                {prime.map(movie => (
+                                    <a href={movie.prime} target="_blank"> <img src="/images/primevideo.png" alt="Prime Video" /> </a>
+                                ))}
+
+                                {disney.map(movie => (
+                                    <a href={movie.disney} target="_blank"> <img src="/images/disney.png" alt="Disney Plus" /> </a>
+                                ))}
+
+                                {hbo.map(movie => (
+                                    <a href={movie.hbo} target="_blank"> <img src="/images/hbo.png" alt="HBO Plus" /> </a>
+                                ))}
+
+                                {youtube.map(movie => (
+                                    <a href={movie.youtube} target="_blank"> <img src="/images/youtube.png" alt="Youtube" /> </a>
+
+                                ))}
+                            </div>
 
                             <div className='movie-background'> <img src={movie.background} alt="Minha Figura" /> </div>
-
 
                         </div>
                     ))}

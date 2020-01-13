@@ -102,3 +102,22 @@
     align-items: center;
     justify-content: center;
 }
+
+.movie-link {
+    position: absolute;
+    display: inline-flex;
+    margin-top: 200px;
+    list-style: none;
+}
+
+.movie-link a{
+    transform: scale(0.7);
+}
+
+.movie-link a:hover{
+    transform: scale(0.8);
+}
+
+.movie-link a img{
+    border-radius: 25px;
+}
