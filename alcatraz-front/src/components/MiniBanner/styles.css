@@ -20,7 +20,7 @@
 }
 
 .carousel .slide{
-    background: transparent;
+    background: transparent!important;
 }
 
 .carousel .carousel-status{
