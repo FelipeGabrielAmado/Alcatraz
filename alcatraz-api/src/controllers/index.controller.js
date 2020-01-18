@@ -24,6 +24,12 @@ const getMoviesById = async (req, res) => {
     res.json(response.rows);
 };
 
+const getMoviesByCategory = async (req, res) => {
+    const category = parseInt(req.params.id);
+    const response = await pool.query('SELECT * FROM movies WHERE category = $1', [category]);
+    res.json(response.rows);
+};
+
 const createMovie = async (req, res) => {
     const { name, description, genre, rating, trailer, director, stars, poster } = req.body;
     const response = await pool.query('INSERT INTO movies (name, description, genre, rating, trailer, director, stars, poster) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
@@ -73,6 +79,7 @@ const deleteMovie = async (req, res) => {
 module.exports = {
     getMovies,
     getMoviesById,
+    getMoviesByCategory,
     createMovie,
     updateMovie,
     deleteMovie,

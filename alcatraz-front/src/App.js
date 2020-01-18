@@ -6,12 +6,12 @@ import Routes from './routes'
 import Footer from './components/Footer'
 
 
+
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Routes/>
-      <Footer />
+        <Routes/>
+
     </div>
   );
 }

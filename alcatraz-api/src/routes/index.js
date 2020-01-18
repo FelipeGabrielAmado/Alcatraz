@@ -1,7 +1,7 @@
 const { Router } = require('express');
 const router = Router();
 
-const { getMovies, getMoviesById, createMovie, updateMovie, deleteMovie, getMoviesMain } = require('../controllers/index.controller');
+const { getMovies, getMoviesById, createMovie, updateMovie, deleteMovie, getMoviesMain, getMoviesByCategory } = require('../controllers/index.controller');
 const { getCategories, getCategoriesById, createCategories, updateCategories, deleteCategories } = require('../controllers/categories.controller');
 
 router.get('/movies', getMovies);
@@ -17,5 +17,7 @@ router.get('/categories/:id', getCategoriesById);
 router.post('/categories', createCategories);
 router.put('/categories/:id', updateCategories)
 router.delete('/categories/:id', deleteCategories);
+
+router.get('/movies/categories/:id', getMoviesByCategory);
 
 module.exports = router;

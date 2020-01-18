@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.css'
 
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
 
 
 export default class Header extends Component {
@@ -20,7 +21,7 @@ export default class Header extends Component {
     render() {
         const { categories } = this.state;
         const itemsMenu = categories.filter(category => category.menu === true);
-        
+
         return (
             <div className="header">
                 <a href="http://localhost:3001/">
@@ -31,12 +32,15 @@ export default class Header extends Component {
                 <header id="sub-header">
                     <ul>
 
-                        {itemsMenu.map(category => (
+                        {itemsMenu.map((category) => (
 
-                            <li key={category.id}><a href="#">{category.name}</a></li>
+
+
+                            <li key={category.id}>  <Link to={`/categories/${category.id}`} > {category.name}  </Link></li>
+
 
                         ))}
-                            <li> <a href='#'> See more </a></li>
+                        <li key={'see-more'}> <a href='#'> See more </a> </li>
                     </ul>
                 </header>
             </div>

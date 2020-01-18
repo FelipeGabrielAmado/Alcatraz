@@ -1,0 +1,94 @@
+.dashboard {
+    color: white;
+    float: left;
+    margin-left: 300px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+
+.dashboard-title {
+    font-size: 40px;
+    font-weight: 900;
+}
+
+.dashboard-welcome{
+    color: #83858d;
+}
+
+.dashboard-infos {
+    margin-top: 50px;
+    display: inline-flex;
+}
+
+.welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+}
+.dashboard-box {
+    width: 215px;
+    height: 85px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #1f2940;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-direction: column;
+    margin-right: 50px;
+}
+
+.growing-percentage {
+    margin-top: 6px;
+    color: #4cceac;
+}
+
+.movie-list {
+    background-color: #1f2940;
+    margin-top: 30px;
+    width: 1010px;
+    height: 300px;
+    border-radius: 15px;
+    position: relative;
+}
+
+th {
+    padding: 20px 90px 20px 90px;
+}
+
+td {
+    padding-bottom: 15px;
+    padding-top: 15px;
+}
+
+.view{
+    color: #86d0f9;
+}
+
+.edit{
+    color: #4cceac;
+}
+
+.remove{
+    color: #db504a;
+}
+
+.see-all-button {
+    position: absolute;
+    right: 65px;
+    bottom: 30px;
+}
+
+tr:nth-child(even){background-color: #2b3650}
+
+th {
+  background-color: #ffbe00;
+  color: white;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
