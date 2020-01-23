@@ -84,7 +84,7 @@ export default class Dashboard extends Component {
                 
                     </table>
 
-                    <div className='see-all-button'> List all Movies</div>
+                    <a href='/movies'> <div className='see-all-button'> List all Movies</div> </a>
                 </div>
 
             </div>
