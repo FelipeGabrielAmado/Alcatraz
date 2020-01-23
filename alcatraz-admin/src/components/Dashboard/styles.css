@@ -49,7 +49,7 @@
     background-color: #1f2940;
     margin-top: 30px;
     width: 1010px;
-    height: 300px;
+    height: 500px;
     border-radius: 15px;
     position: relative;
 }
@@ -77,8 +77,8 @@ td {
 
 .see-all-button {
     position: absolute;
-    right: 65px;
-    bottom: 30px;
+    right: 20px;
+    bottom: 20px;
 }
 
 tr:nth-child(even){background-color: #2b3650}

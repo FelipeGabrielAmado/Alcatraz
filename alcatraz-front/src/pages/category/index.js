@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 
 
-export default class Movie extends Component {
+export default class Category extends Component {
     state = {
         category: [],
         movies: []
@@ -30,7 +30,7 @@ export default class Movie extends Component {
     render() {
         const { category } = this.state;
         const { movies } = this.state;
-
+        
         return (
             <div>
                 <div className='category-inner'>
@@ -61,7 +61,7 @@ export default class Movie extends Component {
                     </div>
 
                 </div>
-
+                            
             </div >
         );
     }

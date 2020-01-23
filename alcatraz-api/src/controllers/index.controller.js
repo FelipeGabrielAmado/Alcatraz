@@ -18,6 +18,11 @@ const getMoviesMain = async (req, res) => {
     res.status(200).json(response.rows);
 };
 
+const getMoviesAdmin = async (req, res) => {
+    const response = await pool.query('SELECT * FROM movies ORDER BY id DESC limit 8')
+    res.status(200).json(response.rows);
+};
+
 const getMoviesById = async (req, res) => {
     const id = parseInt(req.params.id);
     const response = await pool.query('SELECT * FROM movies WHERE id = $1', [id]);
@@ -45,7 +50,7 @@ const createMovie = async (req, res) => {
     res.json({
         message: 'Movie Added successfully',
         body: {
-            movies: {name, description, genre, rating, trailer, director, stars, poster}
+            movies: { name, description, genre, rating, trailer, director, stars, poster }
         }
     })
 };
@@ -54,7 +59,7 @@ const updateMovie = async (req, res) => {
     const id = parseInt(req.params.id);
     const { name, description, genre, rating, trailer, director, stars, poster } = req.body;
 
-    const response =await pool.query('UPDATE movies SET name = $1, description = $2, genre = $3, rating = $4, trailer = $5, director = $6, stars = $7, poster = $8 WHERE id = $9', [
+    const response = await pool.query('UPDATE movies SET name = $1, description = $2, genre = $3, rating = $4, trailer = $5, director = $6, stars = $7, poster = $8 WHERE id = $9', [
         name,
         description,
         genre,
@@ -80,6 +85,7 @@ module.exports = {
     getMovies,
     getMoviesById,
     getMoviesByCategory,
+    getMoviesAdmin,
     createMovie,
     updateMovie,
     deleteMovie,
