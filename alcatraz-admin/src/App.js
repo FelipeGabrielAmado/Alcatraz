@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import SideMenu from './components/SideMenu'
-import Dashboard from './components/Dashboard'
+import Routes from './routes'
 
 function App() {
   return (
     <div className="App">
-        <SideMenu />
-         <Dashboard />
+        <Routes />
     </div>
   );
 }
