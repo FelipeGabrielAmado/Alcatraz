@@ -95,8 +95,8 @@ button {
     padding: 10px 10px 10px 5px;
     display: block;
     width: 200px;
-    border: 2px solid #ffffff;
-    background: transparent;
+    border: 2px solid transparent;
+    background: #4cceac;
     margin-bottom: 30px;
     color: white;
     margin-right: 50px;
@@ -106,6 +106,7 @@ button {
 }
 
 button:hover{
-    border: 2px solid #ffbe00;
-    color: #ffbe00;;
+    border: 2px solid #4cceac;
+    color: #4cceac;
+    background: transparent;
 }
