@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.css'
 
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
     state = {
@@ -74,14 +75,16 @@ export default class Dashboard extends Component {
                             <th>REMOVE</th>
                         </tr>
                         {movies.map(movie => (
-                        <tr>
-                            <td>{movie.name}</td>
-                            <td className='view'>View <div className='movie-description'>{movie.description}</div></td>
-                            <td className='edit'>EDIT</td>
-                            <td className='remove'>REMOVE</td>
-                        </tr>
+                            <tr>
+                                <td>{movie.name}</td>
+                                <td className='view'>View <div className='movie-description'>{movie.description}</div></td>
+                                <Link to={`/movie/edit/${movie.id}`}>
+                                    <td className='edit'>EDIT</td>
+                                </Link>
+                                <td className='remove'>REMOVE</td>
+                            </tr>
                         ))}
-                
+
                     </table>
 
                     <a href='/movies'> <div className='see-all-button'> List all Movies</div> </a>

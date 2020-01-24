@@ -41,7 +41,8 @@
     display: none; 
     position: absolute;
     width: 500px;
-    background: black;
+    background: #141b2d;
+    color: #FFF;
     border-radius: 5px;
     padding: 10px;
     z-index: 9999;
@@ -49,4 +50,22 @@
 
 .view:hover > .movie-description{
     display: inline;
+}
+
+.movie-edit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.movie-form {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-top: 40px;
+}
+
+a{
+    text-decoration: none;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './styles.css'
 
 import api from '../../services/api'
+import { Link } from 'react-router-dom'
 
 
 export default class Movies extends Component {
@@ -39,7 +40,9 @@ export default class Movies extends Component {
                             <tr>
                                 <td>{movie.name}</td>
                                 <td className='view'>View <div className='movie-description'>{movie.description}</div></td>
-                                <td className='edit'>EDIT</td>
+                                <Link to={`/movie/edit/${movie.id}`}>
+                                    <td className='edit'>EDIT</td>
+                                </Link>
                                 <td className='remove'>REMOVE</td>
                             </tr>
                         ))}
