@@ -53,6 +53,7 @@ export default class MovieEdit extends Component {
                                 <div className='movie-input'> Movie HBO:            </div>  <input type='text' name='movie-hbo' placeholder={movie.hbo} />
                                 <div className='movie-input'> Movie Youtube:        </div>  <input type='text' name='movie-youtube' placeholder={movie.youtube} />
                             </div>
+                            <button> Save </button>
                         </div>
                     </div>
                 ))}

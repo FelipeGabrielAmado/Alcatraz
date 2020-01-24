@@ -33,6 +33,7 @@ export default class CategoriesEdit extends Component {
                                 <div className='movie-input'> Category Description:           </div>  <input type='text' name='category-description' placeholder={category.description} />
                                 <div className='movie-input'> Category in Menu?           </div>  <input type='text' name='category-description' placeholder={category.menu} />
                             </div>
+                            <button> Save </button>
                         </div>
                     </div>
                 ))}
