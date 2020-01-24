@@ -25,7 +25,7 @@ export default class MovieEdit extends Component {
         return (
             <div class="movie-edit">
                 {movies.map(movie => (
-                    <div className='movie-form-input'>
+                    <div className='form-input'>
                         <h1>{movie.name}</h1>
                         <div className='movie-form'>
                             <div className='form-inline'>

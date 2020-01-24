@@ -25,12 +25,16 @@ export default class CategoriesEdit extends Component {
         return (
             <div class="movie-edit">
                 {categories.map(category => (
-                    <div className='movie-form'>
-                        <div className='movie-input'> Category Name:           </div>  <input type='text' name='category-name' placeholder={category.name} />
-                        <div className='movie-input'> Category Description:           </div>  <input type='text' name='category-description' placeholder={category.description} />
-                        <div className='movie-input'> Category in Menu?           </div>  <input type='text' name='category-description' placeholder={category.menu} />
+                    <div className='form-input'>
+                        <h1>{category.name}</h1>
+                        <div className='movie-form'>
+                            <div className='form-inline'>
+                                <div className='movie-input'> Category Name:           </div>  <input type='text' name='category-name' placeholder={category.name} />
+                                <div className='movie-input'> Category Description:           </div>  <input type='text' name='category-description' placeholder={category.description} />
+                                <div className='movie-input'> Category in Menu?           </div>  <input type='text' name='category-description' placeholder={category.menu} />
+                            </div>
+                        </div>
                     </div>
-
                 ))}
             </div>
         );
