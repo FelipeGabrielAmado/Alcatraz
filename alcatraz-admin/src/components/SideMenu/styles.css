@@ -17,12 +17,7 @@
     color: #ffffff;
     display: block;
     transition: .3s;
-    border-bottom: 1px solid white;
     width: 100%;
-  }
-
-  .sidenav a:first-child{
-      border-top: 1px solid white;
   }
   
   .sidenav a:hover {
@@ -59,5 +54,16 @@
 }
 
 .sidenav a:hover {
+    color: #ffbe00;
+}
+
+.active-item {
+    width: 100%;
+    background: #141b2d;
+    height: 50px;
+    border: 1px solid white;
+}
+
+.active-item a{
     color: #ffbe00;
 }

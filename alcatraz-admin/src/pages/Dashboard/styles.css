@@ -96,3 +96,21 @@ table {
 a{
     color: white;
 }
+
+input               {
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 300px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    background: transparent;
+    margin-bottom: 30px;
+    color: white;
+  }
+  input:focus         { outline:none; }
+
+  ::placeholder { 
+    color: white;
+    opacity: .5;
+  }
