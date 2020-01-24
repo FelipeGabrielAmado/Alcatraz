@@ -3,6 +3,8 @@ import './styles.css'
 
 import api from '../../services/api'
 
+import { Link } from 'react-router-dom'
+
 
 export default class Categories extends Component {
 
@@ -41,7 +43,9 @@ export default class Categories extends Component {
                             <tr>
                                 <td>{category.name}</td>
                                 <td className='view'>View <div className='category-description'>{category.description}</div></td>
-                                <td className='edit'>EDIT</td>
+                                <Link to={`/categories/edit/${category.id}`}>
+                                    <td className='edit'>EDIT</td>
+                                </Link>
                                 <td className='remove'>REMOVE</td>
                             </tr>
                         ))}
