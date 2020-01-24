@@ -38,7 +38,7 @@ export default class Movies extends Component {
                         {movies.map(movie => (
                             <tr>
                                 <td>{movie.name}</td>
-                                <td className='view'>View</td>
+                                <td className='view'>View <div className='movie-description'>{movie.description}</div></td>
                                 <td className='edit'>EDIT</td>
                                 <td className='remove'>REMOVE</td>
                             </tr>
