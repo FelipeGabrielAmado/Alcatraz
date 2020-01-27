@@ -8,7 +8,7 @@ export default class SideMenu extends Component {
         console.log(window.location.pathname);
 
         return (
-            <div class="sidenav">
+            <div className="sidenav">
                 <a href='http://localhost:3001/'> <img src="/images/logo.png" alt="Logo Alcatraz" /> </a>
                 <div className='items-menu'>
                         <div className='category-title'>Main</div>

@@ -22,7 +22,7 @@ export default class Dashboard extends Component {
 
         return (
 
-            <div class="dashboard">
+            <div className="dashboard">
                 <div className='welcome'>
                     <div className='dashboard-title'> Dashboard </div>
                     <div className='dashboard-welcome'> Welcome to Alcatraz <b>Dashboard</b> </div>

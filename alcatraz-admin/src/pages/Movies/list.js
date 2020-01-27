@@ -22,7 +22,7 @@ export default class Movies extends Component {
 
         return (
 
-            <div class="movies">
+            <div className="movies">
                 <div className='welcome'>
                     <div className='movies-title'> Movies </div>
                     <div className='movies-welcome'> View, edit and delete <b>Movies</b> </div>

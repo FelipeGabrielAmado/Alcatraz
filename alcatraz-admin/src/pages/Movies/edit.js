@@ -23,7 +23,7 @@ export default class MovieEdit extends Component {
         const { movies } = this.state;
 
         return (
-            <div class="movie-edit">
+            <div className="movie-edit">
                 {movies.map(movie => (
                     <div className='form-input'>
                         <h1>{movie.name}</h1>

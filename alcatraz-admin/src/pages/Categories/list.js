@@ -24,7 +24,7 @@ export default class Categories extends Component {
 
         return (
 
-            <div class="categories">
+            <div className="categories">
                 <div className='welcome'>
                     <div className='categories-title'> Categories </div>
                     <div className='categories-welcome'> View, edit and delete <b>Categories</b> </div>
