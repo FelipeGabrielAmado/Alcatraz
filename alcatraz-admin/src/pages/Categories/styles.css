@@ -49,3 +49,34 @@
 .view:hover > .category-description{
     display: inline;
 }
+
+.create-button {
+    border: 1px solid white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 15px;
+    transition: .5s;
+}
+
+.create-button:hover{
+    border: 1px solid transparent;
+    color: #141b2d;
+    background-color: #ffbe00;
+}
+
+.create-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

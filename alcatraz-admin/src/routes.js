@@ -8,6 +8,7 @@ import MoviesList from './pages/Movies/list'
 import MovieEdit from './pages/Movies/edit'
 import CategoriesList from './pages/Categories/list'
 import CategoriesEdit from './pages/Categories/edit'
+import CategoriesCreate from './pages/Categories/create'
 
 
 const Routes = () => (
@@ -20,6 +21,7 @@ const Routes = () => (
 
                 <Route exact path="/categories" component={CategoriesList} />
                 <Route exact path="/categories/edit/:id" component={CategoriesEdit} />
+                <Route exact path="/categories/create" component={CategoriesCreate} />
             </Switch>
     </BrowserRouter>
 );

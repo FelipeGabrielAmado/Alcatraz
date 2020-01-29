@@ -28,6 +28,7 @@ export default class Categories extends Component {
                 <div className='welcome'>
                     <div className='categories-title'> Categories </div>
                     <div className='categories-welcome'> View, edit and delete <b>Categories</b> </div>
+                    <a href='/categories/create'> <div className='create-button'> Create New Category </div> </a>
                 </div>
 
 

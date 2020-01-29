@@ -20,7 +20,7 @@ const getCategoriesById = async (req, res) => {
 };
 
 const createCategories = async (req, res) => {
-    const { name, description, menu } = req.body;
+    const { name, description, menu = false } = req.body;
     const response = await pool.query('INSERT INTO categories (name, description, menu) VALUES ($1, $2, $3)', [
         name,
         description,
@@ -29,7 +29,7 @@ const createCategories = async (req, res) => {
     res.json({
         message: 'Category Added successfully',
         body: {
-            categories: {name, description, menu}
+            categories: { name, description, menu }
         }
     })
 };
@@ -38,7 +38,7 @@ const updateCategories = async (req, res) => {
     const id = parseInt(req.params.id);
     const { name, description, menu } = req.body;
 
-    const response =await pool.query('UPDATE categories SET name = $1, description = $2, menu = $3 WHERE id = $4', [
+    const response = await pool.query('UPDATE categories SET name = $1, description = $2, menu = $3 WHERE id = $4', [
         name,
         description,
         menu,

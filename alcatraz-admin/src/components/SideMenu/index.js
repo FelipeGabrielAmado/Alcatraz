@@ -4,9 +4,6 @@ import './styles.css'
 export default class SideMenu extends Component {
 
     render() {
-
-        console.log(window.location.pathname);
-
         return (
             <div className="sidenav">
                 <a href='http://localhost:3001/'> <img src="/images/logo.png" alt="Logo Alcatraz" /> </a>
