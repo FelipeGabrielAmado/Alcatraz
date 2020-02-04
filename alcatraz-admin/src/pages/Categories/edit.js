@@ -7,7 +7,9 @@ import api from '../../services/api'
 export default class CategoriesEdit extends Component {
 
     state = {
-        categories: []
+        categories: [],
+        name: '',
+        description: ''
 
     };
 
@@ -18,6 +20,28 @@ export default class CategoriesEdit extends Component {
         this.setState({ categories: response.data });
     }
 
+    handleChangeName = event => {
+        this.setState({ name: event.target.value });
+    }
+
+    handleChangeDescription = event => {
+        this.setState({ description: event.target.value });
+    }
+
+    handleSubmit = event => {
+        event.preventDefault();
+        const { id } = this.props.match.params;
+        const { name, description } = this.state;
+
+        const response = api.put(`/categories/${id}`, { name, description })
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+                alert(res.data)
+        })    
+        
+    };
+
 
     render() {
         const { categories } = this.state;
@@ -25,17 +49,21 @@ export default class CategoriesEdit extends Component {
         return (
             <div class="movie-edit">
                 {categories.map(category => (
-                    <div className='form-input'>
-                        <h1>{category.name}</h1>
-                        <div className='movie-form'>
-                            <div className='form-inline'>
-                                <div className='movie-input'> Category Name:           </div>  <input type='text' name='category-name' placeholder={category.name} />
-                                <div className='movie-input'> Category Description:           </div>  <input type='text' name='category-description' placeholder={category.description} />
-                                <div className='movie-input'> Category in Menu?           </div>  <input type='text' name='category-description' placeholder={category.menu} />
-                            </div>
-                            <button> Save </button>
-                        </div>
-                    </div>
+                    <div className='create-form'>
+                    <form onSubmit={this.handleSubmit}>
+                        <label>
+                            Category Name:
+                        <input type="text" name="categoryName" onChange={this.handleChangeName} placeholder={category.name} />
+                        </label>
+    
+                        <label>
+                            Category Description:
+                        <input type="text" name="categoryDescription" onChange={this.handleChangeDescription} placeholder={category.description} />
+                        </label>
+    
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
                 ))}
             </div>
         );

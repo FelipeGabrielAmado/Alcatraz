@@ -7,8 +7,7 @@ import api from '../../services/api'
 export default class CategoriesCreate extends Component {
     state = {
         name: '',
-        description: '',
-        mensagem: ''
+        description: ''
     }
 
     handleChangeName = event => {
@@ -28,11 +27,9 @@ export default class CategoriesCreate extends Component {
             .then(res => {
                 console.log(res);
                 console.log(res.data);
-            })
-
-        if (response && response.mensagem) {
-            this.setState({ mensagem: response.mensagem })
-        }
+                alert(res.data.message)
+        })    
+        
     };
 
     render() {

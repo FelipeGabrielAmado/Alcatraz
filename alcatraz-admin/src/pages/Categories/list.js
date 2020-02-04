@@ -19,6 +19,17 @@ export default class Categories extends Component {
         this.setState({ categories: response.data });
     }
 
+    removeCategory(id) {
+
+        const removeCategory =  api.delete(`/categories/${id}`, { id })
+            .then(res => {
+                console.log(removeCategory);
+                console.log(removeCategory.data);
+            })
+            window.location.reload()
+    }
+
+
     render() {
         const { categories } = this.state;
 
@@ -45,9 +56,9 @@ export default class Categories extends Component {
                                 <td>{category.name}</td>
                                 <td className='view'>View <div className='category-description'>{category.description}</div></td>
                                 <Link to={`/categories/edit/${category.id}`}>
-                                    <td className='edit'>EDIT</td>
+                                   <td> <button className='button-edit' > <div className='edit'>EDIT </div> </button> </td>
                                 </Link>
-                                <td className='remove'>REMOVE</td>
+                                <td><button onClick={() => this.removeCategory(category.id)} className='button-remove'> <div className='remove'>REMOVE</div></button></td>
                             </tr>
                         ))}
 

@@ -17,6 +17,16 @@ export default class Movies extends Component {
         this.setState({ movies: response.data });
     }
 
+    removeMovie(id) {
+
+        const removeCategory = api.delete(`/movies/${id}`, { id })
+            .then(res => {
+                console.log(removeCategory);
+                console.log(removeCategory.data);
+            })
+        window.location.reload()
+    }
+
     render() {
         const { movies } = this.state;
 
@@ -41,9 +51,9 @@ export default class Movies extends Component {
                                 <td>{movie.name}</td>
                                 <td className='view'>View <div className='movie-description'>{movie.description}</div></td>
                                 <Link to={`/movie/edit/${movie.id}`}>
-                                    <td className='edit'>EDIT</td>
+                                    <td> <button className='button-edit' > <div className='edit'>EDIT </div> </button> </td>
                                 </Link>
-                                <td className='remove'>REMOVE</td>
+                                <td><button onClick={() => this.removeMovie(movie.id)} className='button-remove'> <div className='remove'>REMOVE</div></button></td>
                             </tr>
                         ))}
 

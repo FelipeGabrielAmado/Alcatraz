@@ -36,8 +36,8 @@ const getMoviesByCategory = async (req, res) => {
 };
 
 const createMovie = async (req, res) => {
-    const { name, description, genre, rating, trailer, director, stars, poster } = req.body;
-    const response = await pool.query('INSERT INTO movies (name, description, genre, rating, trailer, director, stars, poster) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [
+    const { name, description, genre, rating, trailer, director, stars, poster, background, category, netflix, disney, prime, hbo, youtube } = req.body;
+    const response = await pool.query('INSERT INTO movies (name, description, genre, rating, trailer, director, stars, poster, background, category, netflix, disney, prime, hbo, youtube) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15)', [
         name,
         description,
         genre,
@@ -45,7 +45,16 @@ const createMovie = async (req, res) => {
         trailer,
         director,
         stars,
-        poster]);
+        poster,
+        background,
+        category,
+        netflix,
+        disney,
+        prime,
+        hbo,
+        youtube
+    
+    ]);
 
     res.json({
         message: 'Movie Added successfully',
