@@ -92,77 +92,77 @@ export default class MoviesCreate extends Component {
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Movie Name:
-                    <input type="text" name="movieName" onChange={this.handleName} placeholder='Movie Name' />
+                    <input type="text" name="name" onChange={this.handleName} placeholder='Movie Name' />
                     </label>
 
                     <label>
                         Movie Description:
-                    <input type="text" name="movieDescription" onChange={this.handleDescription} placeholder='Movie Description' />
+                    <input type="text" name="description" onChange={this.handleDescription} placeholder='Movie Description' />
                     </label>
 
                     <label>
                         Movie Genre:
-                    <input type="text" name="movieGenre" onChange={this.handleGenre} placeholder='Movie Genre' />
+                    <input type="text" name="genre" onChange={this.handleGenre} placeholder='Movie Genre' />
                     </label>
 
                     <label>
                         Movie Rating:
-                    <input type="text" name="movieRating" onChange={this.handleRating} placeholder='Movie Rating' />
+                    <input type="text" name="rating" onChange={this.handleRating} placeholder='Movie Rating' />
                     </label>
 
                     <label>
                         Movie Trailer:
-                    <input type="text" name="movieTrailer" onChange={this.handleTrailer} placeholder='Movie Trailer' />
+                    <input type="text" name="trailer" onChange={this.handleTrailer} placeholder='Movie Trailer' />
                     </label>
 
                     <label>
                         Movie Director:
-                    <input type="text" name="movieDirector" onChange={this.handleDirector} placeholder='Movie Trailer' />
+                    <input type="text" name="director" onChange={this.handleDirector} placeholder='Movie Trailer' />
                     </label>
 
                     <label>
                         Movie Stars:
-                    <input type="text" name="movieStars" onChange={this.handleStars} placeholder='Movie Stars' />
+                    <input type="text" name="stars" onChange={this.handleStars} placeholder='Movie Stars' />
                     </label>
 
                     <label>
                         Movie Poster:
-                    <input type="text" name="moviePoster" onChange={this.handlePoster} placeholder='Movie Poster' />
+                    <input type="text" name="poster" onChange={this.handlePoster} placeholder='Movie Poster' />
                     </label>
 
                     <label>
                         Movie Background:
-                    <input type="text" name="movieBackground" onChange={this.handleBackground} placeholder='Movie Background' />
+                    <input type="text" name="background" onChange={this.handleBackground} placeholder='Movie Background' />
                     </label>
 
                     <label>
                         Movie Category:
-                    <input type="text" name="movieCategory" onChange={this.handleCategory} placeholder='Movie Category' />
+                    <input type="text" name="category" onChange={this.handleCategory} placeholder='Movie Category' />
                     </label>
 
                     <label>
                         Movie Netflix:
-                    <input type="text" name="movieNetflix" onChange={this.handleNetflix} placeholder='Netflix' />
+                    <input type="text" name="netflix" onChange={this.handleNetflix} placeholder='Netflix' />
                     </label>
 
                     <label>
                         Movie Disney:
-                    <input type="text" name="movieDisney" onChange={this.handleDisney} placeholder='Disney' />
+                    <input type="text" name="disney" onChange={this.handleDisney} placeholder='Disney' />
                     </label>
 
                     <label>
                         Movie Prime:
-                    <input type="text" name="moviePrime" onChange={this.handlePrime} placeholder='Prime' />
+                    <input type="text" name="prime" onChange={this.handlePrime} placeholder='Prime' />
                     </label>
 
                     <label>
                         Movie HBO:
-                    <input type="text" name="movieHBO" onChange={this.handleHBO} placeholder='HBO' />
+                    <input type="text" name="hbo" onChange={this.handleHBO} placeholder='HBO' />
                     </label>
 
                     <label>
                         Movie Youtube:
-                    <input type="text" name="movieYoutube" onChange={this.handleYoutube} placeholder='Youtube' />
+                    <input type="text" name="youtube" onChange={this.handleYoutube} placeholder='Youtube' />
                     </label>
 
                     <button type="submit">Create</button>

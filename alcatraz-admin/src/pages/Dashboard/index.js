@@ -6,7 +6,9 @@ import { Link } from 'react-router-dom'
 
 export default class Dashboard extends Component {
     state = {
-        movies: []
+        movies: [],
+        moviecount: [],
+        categorycount: []
 
     };
 
@@ -14,11 +16,27 @@ export default class Dashboard extends Component {
         const response = await api.get(`/moviesadmin`);
         console.log(response)
         this.setState({ movies: response.data });
+
+        const moviescount = await api.get(`/movies`);
+        this.setState({moviecount: moviescount.data.length})
+
+        const categoriescount = await api.get(`/categories`);
+        this.setState({categorycount: categoriescount.data.length})
+    }
+
+    removeMovie(id) {
+
+        const removeCategory = api.delete(`/movies/${id}`, { id })
+            .then(res => {
+                console.log(removeCategory);
+                console.log(removeCategory.data);
+            })
+        window.location.reload()
     }
 
     render() {
 
-        const { movies } = this.state;
+        const { movies, moviecount, categorycount } = this.state;
 
         return (
 
@@ -31,28 +49,21 @@ export default class Dashboard extends Component {
                 <div className='dashboard-infos'>
                     <div className='dashboard-box'>
                         <div className='quantaty'>
-                            24 Movies
+                            {moviecount} Movies
                         </div>
-                        <div className='growing-percentage'>
-                            30% +
-                        </div>
+
                     </div>
 
                     <div className='dashboard-box'>
                         <div className='quantaty'>
-                            22 Categories
+                            {categorycount} Categories
                         </div>
-                        <div className='growing-percentage'>
-                            0% +
-                        </div>
+
                     </div>
 
                     <div className='dashboard-box'>
                         <div className='quantaty'>
                             1.024 Users
-                        </div>
-                        <div className='growing-percentage'>
-                            999% +
                         </div>
                     </div>
 
@@ -60,14 +71,11 @@ export default class Dashboard extends Component {
                         <div className='quantaty'>
                             15.053 Access
                         </div>
-                        <div className='growing-percentage'>
-                            999% +
-                        </div>
                     </div>
                 </div>
 
                 <div className='movie-list'>
-                    <table>
+                <table>
                         <tr>
                             <th>Name</th>
                             <th>Description</th>
@@ -79,9 +87,9 @@ export default class Dashboard extends Component {
                                 <td>{movie.name}</td>
                                 <td className='view'>View <div className='movie-description'>{movie.description}</div></td>
                                 <Link to={`/movie/edit/${movie.id}`}>
-                                    <td className='edit'>EDIT</td>
+                                    <td> <button className='button-edit' > <div className='edit'>EDIT </div> </button> </td>
                                 </Link>
-                                <td className='remove'>REMOVE</td>
+                                <td><button onClick={() => this.removeMovie(movie.id)} className='button-remove'> <div className='remove'>REMOVE</div></button></td>
                             </tr>
                         ))}
 

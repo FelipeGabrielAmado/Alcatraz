@@ -2,7 +2,7 @@
     color: white;
     float: left;
     margin-left: 300px;
-    margin-top: 40px;
+    margin-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
@@ -31,7 +31,7 @@
 .category-list-inner{
     background-color: #1f2940;
     margin-top: 30px;
-    width: 1010px;
+    width: 1400px;
     height: 100%;
     border-radius: 15px;
     position: relative;
@@ -96,7 +96,7 @@ form {
     margin: 0px;
     transition: .5s;
     cursor: pointer;
-    margin-left: 35px;
+    margin-left: 100px;
 }
 
 .button-remove:hover {

@@ -36,6 +36,7 @@ export default class Movies extends Component {
                 <div className='welcome'>
                     <div className='movies-title'> Movies </div>
                     <div className='movies-welcome'> View, edit and delete <b>Movies</b> </div>
+                    <a href='/movie/create'> <div className='create-button'> Create New Movie </div> </a>
                 </div>
 
                 <div className='movie-list-inner'>
