@@ -7,6 +7,7 @@
     background-color: #0b0a0d;
     border-top: 5px solid #ffbe00;
     clear: both;
+    overflow-x: hidden;
 }
 
 .footer-box svg:not(:root).svg-inline--fa {
@@ -21,6 +22,7 @@
 .item-footer {
     margin: 0 20px 0px 20px;
     font-size: 15px;
+    text-align: center;
 }
 
 .item-footer a:hover {

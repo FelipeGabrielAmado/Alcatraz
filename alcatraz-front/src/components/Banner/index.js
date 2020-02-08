@@ -1,5 +1,6 @@
 import React from 'react';
 import './styles.css'
+import './responsive.css'
 import { faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -22,7 +23,7 @@ const Banner = () => (
                 </a>
             </div>
         </div>
-        <img src="images/banner-joker.jpg" />
+       <div className='img-banner'> <img src="images/banner-joker.jpg" /> </div>
     </div >
 
 );
