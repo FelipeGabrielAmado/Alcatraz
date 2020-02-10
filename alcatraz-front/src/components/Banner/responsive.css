@@ -3,9 +3,6 @@
 }
 
 @media only screen and (max-width: 950px) {
-    .banner{
-        margin-top: 145px;
-    }
     .banner-info{
         width: 200px!important;
         left: 30px!important;

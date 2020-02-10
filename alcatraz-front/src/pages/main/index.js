@@ -9,6 +9,7 @@ import './styles.css'
 import './responsive.css'
 import Banner from '../../components/Banner'
 import MiniBanner from '../../components/MiniBanner'
+import Search from '../../components/Search'
 
 export default class Main extends Component {
     state = {
@@ -32,26 +33,27 @@ export default class Main extends Component {
 
         return (
             <div>
+                <Search />
                 <Banner />
                 <MiniBanner />
-                    <div className="movie-list">
-                        {movies.map(movie => (
+                <div className="movie-list">
+                    {movies.map(movie => (
 
-                            <article key={movie.id}>
-                                <div className="poster-box">
-                                    <Link to={`/movie/${movie.id}`}>
+                        <article key={movie.id}>
+                            <div className="poster-box">
+                                <Link to={`/movie/${movie.id}`}>
                                     <img src={movie.poster} alt="Minha Figura" />
                                     <div className="movie-info">
                                         <div className="movie-title"> {movie.name} </div>
                                         <div className="movie-genre"> {movie.genre} </div>
                                         <div className="movie-rating"> <FontAwesomeIcon icon={faStar} /> {movie.rating} </div>
                                     </div>
-                                    </Link>
-                                </div>
-                            </article>
+                                </Link>
+                            </div>
+                        </article>
 
-                        ))}
-                    </div>
+                    ))}
+                </div>
             </div >
         )
     }
