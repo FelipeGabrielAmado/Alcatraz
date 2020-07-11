@@ -1,5 +1,4 @@
 .movie-inner {
-    margin-top: 135px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,7 +19,8 @@
 
 .movie-info-inner{
     position: absolute;
-    clear: both;
+    display: flex;
+    flex-direction: row;
 }
 
 .movie-genre{
@@ -106,7 +106,7 @@
 .movie-link {
     position: absolute;
     display: inline-flex;
-    margin-top: 200px;
+    margin-top: 300px;
     list-style: none;
 }
 
@@ -120,4 +120,8 @@
 
 .movie-link a img{
     border-radius: 25px;
+}
+
+.movie-box{
+    margin-top: 100px;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import api from '../../services/api'
 import './styles.css'
+import './responsive.css'
 
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -39,7 +40,6 @@ export default class Movie extends Component {
         const youtube = movies.filter(movie => movie.youtube !== null);
 
         return (
-            <div>
                 <div className='movie-inner'>
                     {movies.map(movie => (
                         <div className='movie'>
@@ -83,7 +83,6 @@ export default class Movie extends Component {
                         </div>
                     ))}
                 </div>
-            </div>
         );
     }
 }

@@ -6,8 +6,8 @@
 .poster-box {
   transition: 0.3s;
   position: relative;
-  width: 238.1px;
-  height: 320px;
+  width: 272px;
+  height: 400px;
   cursor: pointer;
 }
 
@@ -95,5 +95,5 @@ svg:not(:root).svg-inline--fa {
 }
 
 article {
-    flex: 0 0 10%;
+  flex-basis: 14.285714285714286%;
 }

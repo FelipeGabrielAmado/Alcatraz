@@ -6,10 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom'
 
 import './styles.css'
-import './responsive.css'
 import Banner from '../../components/Banner'
-import MiniBanner from '../../components/MiniBanner'
-import Search from '../../components/Search'
+import SearchBar from '../../components/Search-bar'
 
 export default class Main extends Component {
     state = {
@@ -33,9 +31,8 @@ export default class Main extends Component {
 
         return (
             <div>
-                <Search />
                 <Banner />
-                <MiniBanner />
+                <SearchBar />
                 <div className="movie-list">
                     {movies.map(movie => (
 
