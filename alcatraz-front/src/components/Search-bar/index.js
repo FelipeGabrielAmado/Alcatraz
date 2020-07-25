@@ -9,9 +9,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const SearchBar = () => (
     <div className='search-box'>
 
-        <div class="searchinput">
-                <input type="text" name="q" placeholder="Search for a Movie" class="text" required />
-                <button type="submit" class="submit"><FontAwesomeIcon icon={faSearch} /></button>
+        <div className="searchinput">
+                <input type="text" name="q" placeholder="Search for a Movie" className="text" required />
+                <button type="submit" className="submit"><FontAwesomeIcon icon={faSearch} /></button>
         </div>
 
     </div>

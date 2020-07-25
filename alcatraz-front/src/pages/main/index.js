@@ -5,9 +5,12 @@ import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Link } from 'react-router-dom'
 
-import './styles.css'
+import './styles.css'   
+import './responsive.css'
+
 import Banner from '../../components/Banner'
 import SearchBar from '../../components/Search-bar'
+
 
 export default class Main extends Component {
     state = {

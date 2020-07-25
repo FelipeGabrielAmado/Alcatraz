@@ -1,13 +1,19 @@
 .movie-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie-list::after {
+  content: "";
+  flex: auto;
 }
 
 .poster-box {
   transition: 0.3s;
   position: relative;
-  width: 272px;
-  height: 400px;
+  width: 17em;
+  height: 25em;
   cursor: pointer;
 }
 

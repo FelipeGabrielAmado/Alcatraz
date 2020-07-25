@@ -2,7 +2,7 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
     host: 'localhost',
-    user: 'postgres',
+    user: 'alcatraz_manager',
     password: '123',
     database: 'alcatraz_api',
     port: '5432'
@@ -31,7 +31,7 @@ const getMoviesById = async (req, res) => {
 
 const getMoviesByCategory = async (req, res) => {
     const category = parseInt(req.params.id);
-    const response = await pool.query('SELECT * FROM movies WHERE category = $1', [category]);
+    const response = await pool.query('SELECT * FROM movies WHERE category = $1 ORDER BY id DESC', [category]);
     res.json(response.rows);
 };
 

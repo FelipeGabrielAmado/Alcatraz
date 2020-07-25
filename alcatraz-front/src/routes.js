@@ -4,8 +4,7 @@ import Main from './pages/main'
 import Movie from './pages/movie'
 import Category from './pages/category'
 import Header from './components/Header'
-import Footer from './components/Footer'
-import AboutPage from './pages/about-us/about'
+import Footer from './components/Footer'    
 
 const Routes = () => (
     <BrowserRouter>
